@@ -28,7 +28,7 @@ struct Data {
 std::vector<Data> data;
 std::mutex data_mutex;
 
-//************************************LEON MAP
+//************************************MAP
 // Map für aktuellen Status (eingeloggt/ausgeloggt)
 std::map<int, bool> current_status;
 
@@ -51,7 +51,7 @@ std::string find_name_by_id(int user_id) {
     return ""; // Name nicht gefunden
 }
 
-//***************************************LEON user logged in
+//************************************* user logged in
 // Ausgabe aller aktuell eingeloggten User auf der Konsole
 void print_logged_in_users() {
     std::cout << "=== Aktuell eingeloggte Karten ===" << std::endl;
@@ -143,7 +143,7 @@ int main() {
         return crow::response(200, j.dump());
     });
 
-    //***********************************LEON CSV
+    //********************************** CSV
     CROW_ROUTE(app, "/api/rfid/log/csv").methods("GET"_method)([](){
         std::lock_guard<std::mutex> lock(data_mutex);
 

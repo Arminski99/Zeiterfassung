@@ -19,7 +19,7 @@ bool statusSwap = false;
 const int buzzerPin = 25;
 
 
-/**************************** LEON*/
+/**************************** 
 const char* ssid = "COY-85996";
 const char* password = "8f7z-czyd-re7j-lp0t";
 const char* serverUrl = "http://192.168.1.105:18080/api/rfid/log";
@@ -33,7 +33,7 @@ void setup() {
 
   Serial.println("RFID Leser bereit");
 
- /**************************** LEON*/
+ /***************************
   WiFi.begin(ssid, password);
   Serial.print("Verbinde mit WLAN");
   while (WiFi.status() != WL_CONNECTED) {
